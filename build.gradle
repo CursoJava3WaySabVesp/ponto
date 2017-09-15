@@ -34,6 +34,8 @@ dependencies {
     runtime('org.springframework.boot:spring-boot-devtools')
     compile 'org.joinfaces:jsf-spring-boot-starter:2.4.0'
     compile 'org.primefaces.themes:bootstrap:1.0.10'
+    compile('org.springframework.boot:spring-boot-starter-security')
+    compile ('org.springframework.security:spring-security-web:4.2.3.RELEASE')
 
     compile 'org.postgresql:postgresql:42.1.4'
 
