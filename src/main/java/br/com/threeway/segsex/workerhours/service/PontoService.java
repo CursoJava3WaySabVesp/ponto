@@ -1,6 +1,6 @@
-package br.com.threeway.segsex.locadora.service;
+package br.com.threeway.segsex.workerhours.service;
 
-import br.com.threeway.segsex.locadora.dao.PontoDao;
+import br.com.threeway.segsex.workerhours.dao.PontoDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
