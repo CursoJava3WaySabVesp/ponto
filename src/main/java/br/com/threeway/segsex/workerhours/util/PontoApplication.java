@@ -1,4 +1,4 @@
-package br.com.threeway.segsex.locadora.util;
+package br.com.threeway.segsex.workerhours.util;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;

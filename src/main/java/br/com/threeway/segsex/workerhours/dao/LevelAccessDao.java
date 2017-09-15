@@ -1,6 +1,6 @@
-package br.com.threeway.segsex.locadora.dao;
+package br.com.threeway.segsex.workerhours.dao;
 
-import br.com.threeway.segsex.locadora.domain.LevelAccess;
+import br.com.threeway.segsex.workerhours.domain.LevelAccess;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**

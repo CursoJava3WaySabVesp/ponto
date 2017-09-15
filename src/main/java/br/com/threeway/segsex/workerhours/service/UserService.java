@@ -1,7 +1,7 @@
-package br.com.threeway.segsex.locadora.service;
+package br.com.threeway.segsex.workerhours.service;
 
-import br.com.threeway.segsex.locadora.dao.UserDao;
-import br.com.threeway.segsex.locadora.domain.User;
+import br.com.threeway.segsex.workerhours.dao.UserDao;
+import br.com.threeway.segsex.workerhours.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

@@ -1,10 +1,10 @@
-package br.com.threeway.segsex.locadora.config;
+package br.com.threeway.segsex.workerhours.config;
 
-import br.com.threeway.segsex.locadora.dao.LevelAccessDao;
-import br.com.threeway.segsex.locadora.domain.LevelAccess;
-import br.com.threeway.segsex.locadora.domain.Permission;
-import br.com.threeway.segsex.locadora.domain.User;
-import br.com.threeway.segsex.locadora.service.UserService;
+import br.com.threeway.segsex.workerhours.dao.LevelAccessDao;
+import br.com.threeway.segsex.workerhours.domain.LevelAccess;
+import br.com.threeway.segsex.workerhours.domain.Permission;
+import br.com.threeway.segsex.workerhours.domain.User;
+import br.com.threeway.segsex.workerhours.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.ApplicationListener;

@@ -1,6 +1,6 @@
-package br.com.threeway.segsex.locadora.config;
+package br.com.threeway.segsex.workerhours.config;
 
-import br.com.threeway.segsex.locadora.domain.Permission;
+import br.com.threeway.segsex.workerhours.domain.Permission;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

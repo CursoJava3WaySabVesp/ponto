@@ -1,4 +1,4 @@
-package br.com.threeway.segsex.locadora.domain;
+package br.com.threeway.segsex.workerhours.domain;
 
 import java.util.List;
 
