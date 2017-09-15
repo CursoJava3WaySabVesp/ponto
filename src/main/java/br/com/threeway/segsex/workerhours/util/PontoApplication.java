@@ -15,6 +15,6 @@ public class PontoApplication extends SpringBootServletInitializer{
     }
 
     public PasswordEncoder getPasswordEncoder(){
-
+        return null;
     }
 }
