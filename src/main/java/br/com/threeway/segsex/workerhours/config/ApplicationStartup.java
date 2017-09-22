@@ -1,45 +1,43 @@
 package br.com.threeway.segsex.workerhours.config;
 
-import br.com.threeway.segsex.workerhours.dao.LevelAccessDao;
-import br.com.threeway.segsex.workerhours.domain.LevelAccess;
-import br.com.threeway.segsex.workerhours.domain.Permission;
-import br.com.threeway.segsex.workerhours.domain.User;
-import br.com.threeway.segsex.workerhours.service.UserService;
+import br.com.threeway.segsex.workerhours.dao.PapelDao;
+import br.com.threeway.segsex.workerhours.domain.Papel;
+import br.com.threeway.segsex.workerhours.domain.Permissao;
+import br.com.threeway.segsex.workerhours.domain.Usuario;
+import br.com.threeway.segsex.workerhours.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.ApplicationListener;
+import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 import java.util.Date;
 
-/**
- * Created by Alex on 02/09/2017.
- */
+@Component
 public class ApplicationStartup implements ApplicationListener<ApplicationReadyEvent> {
 
-    @Autowired
-    private LevelAccessDao papelDao;
+	@Autowired
+	private PapelDao papelDao;
+	@Autowired
+	private UsuarioService usuarioService;
 
-    @Autowired
-    private UserService usuarioService;
+	@Override
+	public void onApplicationEvent(ApplicationReadyEvent event) {
+		Papel papel = new Papel();
+		papel.setNome("ADMIN");
+		papel.setPermissoes(Arrays.asList(Permissao.ACESSAR_TELA_ADMINISTRATIVA));
 
-    @Override
-    public void onApplicationEvent(ApplicationReadyEvent event) {
-        LevelAccess levelAccess = new LevelAccess();
-        levelAccess.setName("ADMIN");
-        levelAccess.setPermissions(Arrays.asList(Permission.ADM_SCREEN_ACCESS));
+		papelDao.save(papel);
 
-        papelDao.save(levelAccess);
+		Usuario admin = new Usuario();
+		admin.setUsername("admin");
+		admin.setPassword("admin");
+		admin.setNome("Admin");
+		admin.setCpf("11111111111");
+		admin.setDataDeCadastro(new Date());
+		admin.setDataDeAtualizacao(new Date());
+		admin.setPapeis(Arrays.asList(papel));
 
-        User admin = new User();
-        admin.setUserName("admin");
-        admin.setPassword("admin");
-        admin.setName("Admin");
-        admin.setCpf("11111111111");
-        admin.setCreatedDate(new Date());
-        admin.setUpdatedDate(new Date());
-        admin.setLevelAccesses(Arrays.asList(levelAccess));
-
-        usuarioService.save(admin);
-    }
+		usuarioService.save(admin);
+	}
 }
