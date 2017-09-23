@@ -19,7 +19,11 @@ public class UsuarioService implements UserDetailsService {
 
 	@Override
 	public Usuario loadUserByUsername(String username) throws UsernameNotFoundException {
-		return usuarioDao.findByUsername(username);
+		Usuario usuario = usuarioDao.findByUsername(username);
+		if(usuario == null){
+			throw new UsernameNotFoundException(username);
+		}
+		return usuario;
 	}
 
 	public void save(Usuario usuario){

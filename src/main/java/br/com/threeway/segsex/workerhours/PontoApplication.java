@@ -1,5 +1,6 @@
 package br.com.threeway.segsex.workerhours;
 
+import br.com.threeway.segsex.workerhours.config.SpringSecurityConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -15,7 +16,7 @@ public class PontoApplication extends SpringBootServletInitializer {
 
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-		return builder.sources(PontoApplication.class);
+		return builder.sources(PontoApplication.class, SpringSecurityConfig.class);
 	}
 
 	@Bean

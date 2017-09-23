@@ -50,7 +50,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 					.loginProcessingUrl(LOGIN_PROCESSING_URL)
 					.usernameParameter("username")
 					.passwordParameter("password")
-					.defaultSuccessUrl("/")
+					.defaultSuccessUrl("/index.xhtml")
 //					.failureHandler((request, response, exception) -> /* Fazer alguma coisa quando falha no login */)
 //					.successHandler((request, response, authentication) -> /* Fazer alguma coisa quando login */)
 					.permitAll()
